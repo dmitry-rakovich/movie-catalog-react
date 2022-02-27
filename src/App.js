@@ -11,7 +11,7 @@ function App() {
 
   const [filmSearch, setFilm] = useState('')
   const [data, setData] = useState([])
-  const [result, setResult] = useState('Null')
+  const [result, setResult] = useState('')
 
   const getFilm = async (page = 1) => {
     const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=8523cbb8&s=${filmSearch}&page=${page}`)
@@ -38,7 +38,7 @@ function App() {
         }
       </div>
       </div>
-      <Pages getFilm={getFilm} />
+      <Pages result={result} getFilm={getFilm} />
     </div>
     </>
   );

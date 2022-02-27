@@ -2,9 +2,7 @@ import { useState } from "react"
 
 const pages = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-
-
-function Pages({ getFilm }) {
+function Pages({ getFilm, result }) {
   const [thisPage, setThisPage] = useState(null)
   const handleGetFilm = (page) => {
     getFilm(page)
@@ -24,7 +22,10 @@ function Pages({ getFilm }) {
         </button>
       )
     })}
-            <button onClick={()=>handleGetFilm(thisPage + 1)}>▶️</button>
+    {console.log(result)}
+    {result <= 10 ?
+    <button style={{cursor:'no-drop'}} disabled='disabled' onClick={()=>handleGetFilm(thisPage + 1)}>▶️</button> :
+    <button onClick={()=>handleGetFilm(thisPage + 1)}>▶️</button>}
     </div>
   )
 }
