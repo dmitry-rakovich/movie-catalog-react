@@ -1,4 +1,4 @@
-[Test app](https://heuristic-meninsky-5731b8.netlify.app/)
+Click [here](https://heuristic-meninsky-5731b8.netlify.app/) to test app
 
 ## To start a project
 
