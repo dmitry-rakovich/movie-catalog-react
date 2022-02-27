@@ -1,6 +1,6 @@
 Click [here](https://heuristic-meninsky-5731b8.netlify.app/) to test app
 
-## To start a project
+## To run a project locally:
 
 ### 1) `git clone` https://github.com/dmitry-rakovich/movie-catalog-react.git
 
