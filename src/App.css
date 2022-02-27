@@ -12,6 +12,10 @@
   align-items: center;
 }
 
+.header input{
+  flex: 0.5;
+}
+
 .header p, .App p{
   font-weight: bold;
   font-size: 20px;
@@ -63,10 +67,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
-
-.pages a{
-  margin: 10px;
+.pages button{
+  margin: 1px;
+  width: 5ch;
+  cursor: pointer;
 }
 
 .no_poster {

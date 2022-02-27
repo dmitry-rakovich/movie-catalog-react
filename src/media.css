@@ -1,0 +1,16 @@
+@media (min-width: 319px) and (max-width: 480px){
+    html {
+        font-size: 10px;
+    }
+    .header {
+        height: 150px;
+        flex-direction: column;
+    }
+    .App p{
+        margin: 0;
+    }
+    .poster_img { 
+        width: 100px;
+        height: 150px;
+    }
+}
