@@ -2,15 +2,46 @@
     html {
         font-size: 10px;
     }
+    .App p {
+        margin: 0;
+    }
     .header {
         height: 150px;
         flex-direction: column;
     }
-    .App p{
-        margin: 0;
+    .header input {
+        flex: 0.2;
     }
-    .poster_img { 
+    .container p {
+        width: 25ch;
+        text-align: center;
+    }
+    .film_card {
+        margin-left: 0;
+    }
+    .poster_img, .no_poster { 
         width: 100px;
         height: 150px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+    .film_card {
+        margin-left: 0;
+    }
+    .poster_img, .no_poster { 
+        width: 100px;
+        height: 150px;
+    }
+    .header{
+        height: 60px;
+        padding: 0 10px;
+        text-align: center;
+    }
+    .header_user {
+        padding: 25px;
     }
 }
