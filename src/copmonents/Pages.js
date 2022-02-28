@@ -8,24 +8,24 @@ function Pages({ getFilm, result }) {
     getFilm(page)
     setThisPage(page)
   }
-  
+
   return (
     <div className='pages'>
-      {thisPage > 1 ? 
-    <button onClick={()=>handleGetFilm(thisPage - 1)}>◀️</button> :
-    <button style={{cursor:'no-drop'}} disabled='disabled' onClick={()=>handleGetFilm(thisPage - 1)}>◀️</button>
-    }
-    {pages.map((page) => {
-      return (
-        <button onClick={()=>{handleGetFilm(page)}} key={page}>
-          {page}
-        </button>
-      )
-    })}
-    {console.log(result)}
-    {result <= 10 ?
-    <button style={{cursor:'no-drop'}} disabled='disabled' onClick={()=>handleGetFilm(thisPage + 1)}>▶️</button> :
-    <button onClick={()=>handleGetFilm(thisPage + 1)}>▶️</button>}
+      {thisPage > 1 ?
+        <button onClick={() => handleGetFilm(thisPage - 1)}>◀️</button> :
+        <button style={{ cursor: 'no-drop' }} disabled='disabled' onClick={() => handleGetFilm(thisPage - 1)}>◀️</button>
+      }
+      {pages.map((page) => {
+        return (
+          <button onClick={() => { handleGetFilm(page) }} key={page}>
+            {page}
+          </button>
+        )
+      })}
+      {console.log(result)}
+      {result <= 10 ?
+        <button style={{ cursor: 'no-drop' }} disabled='disabled' onClick={() => handleGetFilm(thisPage + 1)}>▶️</button> :
+        <button onClick={() => handleGetFilm(thisPage + 1)}>▶️</button>}
     </div>
   )
 }
