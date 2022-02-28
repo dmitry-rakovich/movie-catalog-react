@@ -22,7 +22,6 @@ function Pages({ getFilm, result }) {
           </button>
         )
       })}
-      {console.log(result)}
       {result <= 10 ?
         <button style={{ cursor: 'no-drop' }} disabled='disabled' onClick={() => handleGetFilm(thisPage + 1)}>▶️</button> :
         <button onClick={() => handleGetFilm(thisPage + 1)}>▶️</button>}
