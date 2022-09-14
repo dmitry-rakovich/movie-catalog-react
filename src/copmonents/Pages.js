@@ -1,13 +1,23 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
-const pages = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 function Pages({ getFilm, result }) {
-  const [thisPage, setThisPage] = useState(null)
+  const [thisPage, setThisPage] = useState(0)
+  const [pages, setArrPages] = useState([])
+
   const handleGetFilm = (page) => {
     getFilm(page)
     setThisPage(page)
   }
+
+  const showPages = () => {
+    const arr = new Array(result/10).fill(1, 0, result/10).map((el, i) => el += i)
+    setArrPages(arr.slice(thisPage-1, thisPage+10));
+  }
+
+  useEffect(() => {
+    showPages()
+  }, [thisPage]);
   
   return (
     <div className='pages'>
@@ -17,12 +27,11 @@ function Pages({ getFilm, result }) {
     }
     {pages.map((page) => {
       return (
-        <button onClick={()=>{handleGetFilm(page)}} key={page}>
+        <button className="btn-page" onClick={()=>{handleGetFilm(page)}} key={page}>
           {page}
         </button>
       )
     })}
-    {console.log(result)}
     {result <= 10 ?
     <button style={{cursor:'no-drop'}} disabled='disabled' onClick={()=>handleGetFilm(thisPage + 1)}>▶️</button> :
     <button onClick={()=>handleGetFilm(thisPage + 1)}>▶️</button>}
