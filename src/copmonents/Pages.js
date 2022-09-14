@@ -10,15 +10,6 @@ function Pages({ getFilm, result }) {
     setThisPage(page)
   }
 
-  const showPages = () => {
-    const arr = new Array(result/10).fill(1, 0, result/10).map((el, i) => el += i)
-    setArrPages(arr.slice(thisPage-1, thisPage+10));
-  }
-
-  useEffect(() => {
-    showPages()
-  }, [thisPage]);
-  
   return (
     <div className='pages'>
       {thisPage > 1 ? 

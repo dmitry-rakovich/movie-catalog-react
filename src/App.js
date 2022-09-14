@@ -16,7 +16,7 @@ function App() {
     const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=8523cbb8&s=${filmSearch}&page=${page}`)
     const data = await response.json()
     setResult(data.totalResults)
-    const filmSort = lodash.uniqBy(data.Search,'imdbID')
+    const filmSort = lodash.uniqBy(data.Search, 'imdbID')
     setData(filmSort)
   }
 
@@ -40,7 +40,7 @@ function App() {
       {result && <Pages result={result} getFilm={getFilm} />}
     </div>
     </>
-  );
+  )
 }
 
 export default App;
